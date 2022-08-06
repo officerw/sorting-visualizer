@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="main.css" rel="stylesheet"/>
+        <title>Sorting Algorithm Visualizer</title>
+        <script src="sort.js" async></script>
+    </head>
+    <body onload="createArray()" style="border: 0; margin: 0px;">
+        <h3 class="title">Sorting Algorithm Visualizer</h3>
+        <div class="sort_settings_container">
+            <ul class="sort_settings">
+                <li><input type="button" value="Randomize Array" onclick="createArray()"/></li>
+                <li><input class="slider" id="array_size" type="range" name="Array Size" min="10" max="600" value="200" step="5" oninput="createArray()"/> <label for="Array Size">Array Size</label></li>
+                <li><input class="slider" id="sort_speed"  type="range" name="Sorting Speed" min="0" max="500" value="250" step="50"/> <label for="Sorting Speed">Sorting Speed</label></li>
+            </ul>
+        </div>
+        <div class="algorithm_selector_container">
+            <ul class="algorithm_selector">
+                <li><input type="button" onclick="selectionSort()" value="Selection Sort"/></li>
+                <li><input type="button" onclick="insertionSort()" value="Insertion Sort"/></li>
+                <li><input type="button" onclick="bubbleSort()" value="Bubble Sort"/></li>
+                <li><input type="button" onclick="mainQuickSort()" value="Quick Sort"/></li>
+                <li><input type="button" onclick="heapSort()" value="Heap Sort"/></li>
+            </ul>
+        </div>
+        <div id="array_container"></div>
+    </body>
+</html>
